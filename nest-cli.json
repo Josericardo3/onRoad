@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/ws-onroad/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/ws-onroad/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/ws-onroad",
+  "projects": {
+    "ws-onroad": {
+      "type": "application",
+      "root": "apps/ws-onroad",
+      "entryFile": "main",
+      "sourceRoot": "apps/ws-onroad/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ws-onroad/tsconfig.app.json"
+      }
+    },
+    "ms-itinerary": {
+      "type": "application",
+      "root": "apps/ms-itinerary",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-itinerary/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-itinerary/tsconfig.app.json"
+      }
+    },
+    "ms-security": {
+      "type": "application",
+      "root": "apps/ms-security",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-security/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-security/tsconfig.app.json"
+      }
+    },
+    "ms-bus-management": {
+      "type": "application",
+      "root": "apps/ms-bus-management",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-bus-management/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-bus-management/tsconfig.app.json"
+      }
+    },
+    "ms-reservation": {
+      "type": "application",
+      "root": "apps/ms-reservation",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-reservation/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-reservation/tsconfig.app.json"
+      }
+    },
+    "ms-purchase": {
+      "type": "application",
+      "root": "apps/ms-purchase",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-purchase/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-purchase/tsconfig.app.json"
+      }
+    },
+    "ms-chat": {
+      "type": "application",
+      "root": "apps/ms-chat",
+      "entryFile": "main",
+      "sourceRoot": "apps/ms-chat/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/ms-chat/tsconfig.app.json"
+      }
+    }
+  }
+}
