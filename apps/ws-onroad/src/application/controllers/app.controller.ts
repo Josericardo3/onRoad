@@ -7,14 +7,11 @@ import { ApiTags } from '@nestjs/swagger';
 export class AppController {
   constructor(private readonly appService: AppService) {}
   
-  @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  
+  @Post('newUser')
+  newUser(@Body() body: any): string {
+    console.log("1. Enviando por post: ", body);
+    return this.appService.newUser(body); 
   }
 
-  @Post()
-  newItinerary(@Body() body: any): string {
-    console.log("1. Enviando por post: ", body);
-    return this.appService.newItinerary(body); 
-  }
 }

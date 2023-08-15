@@ -3,15 +3,15 @@ import { ClientProxy } from '@nestjs/microservices';
 
 @Injectable()
 export class AppService {
-  constructor(@Inject('ITINERARY_SERVICE') private clientItinerary: ClientProxy) {}
+  constructor(@Inject('SECURITY_SERVICE') private clientSecurity: ClientProxy) {}
 
   getHello(): string {
     return 'Hello World!';
   }
   
-  newItinerary(itinerary: any){
-    console.log("2. Enviando por post: ", itinerary);
-    this.clientItinerary.emit('new_itinerary', itinerary);
+  newUser(user: any){
+    console.log("Enviando info: " , user);
+    this.clientSecurity.emit('authentication.signup', user);
     return 'send_queue'
   }
 }

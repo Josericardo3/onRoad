@@ -1,9 +1,9 @@
 const config = {
-  hostDb: 'sql10.freemysqlhosting.net',
+  hostDb: 'localhost',
   portDb: 3306,
-  usernameDb: 'sql10639772',
-  passwordDb: 'MgNmZNIkFy',
-  databaseDb: 'sql10639772',
+  usernameDb: 'onroaduser',
+  passwordDb: 'Cercado.2022',
+  databaseDb: 'onroaddb',
 };
 
 export default config;
