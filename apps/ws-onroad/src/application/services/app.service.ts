@@ -10,7 +10,6 @@ export class AppService {
   }
   
   newUser(user: any){
-    console.log("Enviando info: " , user);
     this.clientSecurity.emit('authentication.signup', user);
     return 'send_queue'
   }

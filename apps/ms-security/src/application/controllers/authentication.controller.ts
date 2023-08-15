@@ -15,6 +15,7 @@ export class AuthenticationController {
 
   @EventPattern('authentication.signup')
   async handleSignUpEvent(@Body() signUpDto: SignUpDto) {
+    console.log('recibido: ', signUpDto);
     return this.signUpUseCase.execute(signUpDto);
   }
 

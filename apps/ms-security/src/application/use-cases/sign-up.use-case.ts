@@ -8,6 +8,7 @@ export class SignUpUseCase {
 
   async execute(signUpDto: SignUpDto): Promise<any> {
     const { username, password } = signUpDto;
+    console.log('username: ', username, 'password: ', password);
     return this.authService.signUp(username, password);
   }
 }

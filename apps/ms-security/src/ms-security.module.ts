@@ -18,6 +18,7 @@ import dataSource from 'apps/ms-security/src/infraestructure/typeorm.config';
       secret: 'onRoadToken',
       signOptions: { expiresIn: '1h' },
     }),
+    TypeOrmModule.forFeature([UserRepository]),
     TypeOrmModule.forRoot(dataSourceOptions),
   ],
   controllers: [AuthenticationController],
@@ -27,11 +28,7 @@ export class MsSecurityModule implements OnModuleInit {
   constructor(private connection: Connection) {}
   async onModuleInit() {
     try {
-      console.log('antes');
-      this.connection.synchronize();
-      console.log('despues');
-      const queryResult = await this.connection.query('SELECT 1');
-      console.log('Query result:', queryResult);
+      await this.connection.query('SELECT 1');
       console.log('Connected to the database.');
     } catch (error) {
       console.error('Failed to connect to the database:', error.message);
